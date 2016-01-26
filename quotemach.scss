@@ -1,0 +1,201 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+@mixin rotate($direction) {
+  animation:$direction 4s ease;
+  -moz-animation:$direction 4s ease;
+  -webkit-animation:$direction 4s ease;
+  -o-animation:$direction 4s ease; 
+}
+@mixin size-color($color, $size, $smoothing) {
+  background-image:
+  radial-gradient(at center center, #1F1F1F $size, $color $smoothing, $color 58%, transparent 59%),
+  linear-gradient(0deg, transparent 40%, $color 40%, $color 60%, transparent 60%),
+  linear-gradient(45deg, transparent 43%, $color 43.5%, $color 57%, transparent 57%),
+  linear-gradient(90deg, transparent 40%, $color 40%, $color 60%, transparent 60%),
+  linear-gradient(135deg, transparent 43%, $color 43.5%, $color 57%, transparent 57%);
+}
+@mixin filter($params) {
+  -webkit-filter: $params;
+  filter: $params;
+}
+body {
+  background-color: #1F1F1F;
+  font-family: "Indie Flower";
+  height: 100%;
+  overflow-y: hidden;
+}
+.container {
+  position: relative;
+  margin: 0px auto;
+  width: 700px;
+  height: 400px;
+}
+.machine {
+  position: relative;
+  margin-top: 100px;
+  height: 193px;
+  width: 370px;
+}
+.gear:before, .gear:after{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.gear.rotate-right:before {
+  @include rotate(right);
+}
+.gear.rotate-left:after {
+  @include rotate(left);
+}
+.gear1:before{
+  width:80px;
+  height:80px;
+  top:59px;
+  @include size-color(#000, 23%, 25%);
+}
+.gear1:after{
+  width:100px;
+  height:100px;
+  left:64px;
+  @include size-color(#696969, 30%, 32%);
+}
+.gear2:before{
+  width:150px;
+  height:150px;
+  top:43px;
+  left:143px;
+  @include size-color(#c4c4c4, 40%, 42%);
+}
+.gear2:after{
+  width:100px;
+  height:100px;
+  left:271px;
+  @include size-color(#494949, 30%, 32%);
+}
+
+button {
+  font-family: "Indie Flower";
+  margin-top: 50px;
+  font-size: 20px;
+  height: 80px;
+  width: 80px;
+  border: none;
+  color: white;
+  background-color: rgba(186, 26, 26, 1);
+  border-radius: 50%;
+  box-shadow: 1px 7px 0px rgba(186, 26, 26, 0.5), 0px 9px 25px rgba(0,0,0,.7);
+  transition: all .1s ease;
+  transition: filter .5s ease;
+}
+button:active {
+    box-shadow: 0px 3px 0px rgba(186, 26, 26, 0.5), 0px 3px 6px rgba(0,0,0,.9);
+  }
+.disabled {
+  @include filter(grayscale(0.5));
+}
+.lightbulb {
+  position: absolute;
+  top: -50px;
+  right: 180px;
+  svg {
+    height: 100px;
+    width: 100px;
+  }
+}
+.lb-head {
+  fill: #c4c4c4;
+  transition: all 0.3s ease;
+}
+.line {
+  display: inline;
+  position: absolute;
+  z-index: -2;
+}
+.l1 {
+  bottom: 150px;
+  left: 31px;
+}
+.l2 {
+  top: 40px;
+  left: 345px;
+}
+.card {
+  font-size: 20px;
+  text-align: center;
+  display: -webkit-box; 
+  display: -ms-flexbox; 
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  height: 200px;
+  width: 300px;
+  background-color: tomato;
+}
+.qtext {
+  padding: 10px;
+  text-align: left;
+}
+.author {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+}
+h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.pin {
+  height: 10px;
+  width: 10px;
+  background-color: #1F1F1F;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.stopper {
+  fill: rgba(186, 26, 26, 1);
+  position: absolute;
+  top: 31px;
+  right: -19px;
+  height: 60px;
+  width: 60px;
+  z-index: 1;
+}
+@keyframes right{
+    form{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+@-moz-keyframes right{
+    form{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(360deg);}
+}
+@-webkit-keyframes right{
+    form{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+}
+@-o-keyframes right{
+    form{-o-transform:rotate(0deg);}
+    to{-o-transform:rotate(360deg);}
+}
+@keyframes left{
+    form{transform:rotate(0deg);}
+    to{transform:rotate(-360deg);}
+}
+@-moz-keyframes left{
+    form{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(-360deg);}
+}
+@-webkit-keyframes left{
+    form{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(-360deg);}
+}
+@-o-keyframes left{
+    form{-o-transform:rotate(0deg);}
+    to{-o-transform:rotate(-360deg);}
+}

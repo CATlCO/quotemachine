@@ -1,0 +1,148 @@
+.gear{
+    position:relative;
+    margin:100px auto;
+    width:200px;
+    height:200px;
+}
+.gear:before{
+    content:"";
+    position:absolute;
+    width:75px;
+    height:75px;
+    top:50px;left:40px;
+    border-radius:50%;
+    background-image:
+    radial-gradient(at center center, #fff 23%, #1ca 25%, #1ca 57%, transparent 59%),
+    linear-gradient(0deg, transparent 40%, #1ca 40%, #1ca 60%, transparent 60%),
+    linear-gradient(45deg, transparent 43%, #1ca 43%, #1ca 57%, transparent 57%),
+    linear-gradient(90deg, transparent 40%, #1ca 40%, #1ca 60%, transparent 60%),
+    linear-gradient(135deg, transparent 43%, #1ca 43%, #1ca 57%, transparent 57%);
+    
+    
+    animation:rotates 4s ease;
+    -moz-animation:rotates 4s ease;
+    -webkit-animation:rotates 4s ease;
+    -o-animation:rotates 4s ease;
+}
+.gear:after{
+    content:"";
+    position:absolute;
+    width:55px;
+    height:55px;
+    top:95px;left:103px;
+    border-radius:50%;
+    background-image:
+    radial-gradient(at center center,  #fff 23%, #f35 25%, #f35 57%, transparent 59%),
+    linear-gradient(0deg, transparent 40%, #f35 40%, #f35 60%, transparent 60%),
+    linear-gradient(45deg, transparent 43%, #f35 43%, #f35 57%, transparent 57%),
+    linear-gradient(90deg, transparent 40%, #f35 40%, #f35 60%, transparent 60%),
+    linear-gradient(135deg, transparent 43%, #f35 43%, #f35 57%, transparent 57%);
+    
+    
+    animation:rotateb 4s ease;
+    -moz-animation:rotateb 4s ease;
+    -webkit-animation:rotateb 4s ease;
+    -o-animation:rotateb 4s ease;
+}
+.gear1, .gear2 {
+    display: inline;
+}
+
+.gear1:before{
+    content:"";
+    position:absolute;
+    width:80px;
+    height:80px;
+    top:159px;
+    left:39px;
+    border-radius:50%;
+    background-image:
+    radial-gradient(at center center, #fff 23%, #000 25%, #000 58%, transparent 59%),
+    linear-gradient(0deg, transparent 40%, #000 40%, #000 60%, transparent 60%),
+    linear-gradient(45deg, transparent 43%, #000 43%, #000 57%, transparent 57%),
+    linear-gradient(90deg, transparent 40%, #000 40%, #000 60%, transparent 60%),
+    linear-gradient(135deg, transparent 43%, #000 43%, #000 57%, transparent 57%);
+    
+}
+.gear1:after{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    top:100px;
+    left:103px;
+    border-radius:50%;
+    background-image:
+    radial-gradient(at center center,  #fff 30%, #696969 32%, #696969 58%, transparent 59%),
+    linear-gradient(0deg, transparent 40%, #696969 40%, #696969 60%, transparent 60%),
+    linear-gradient(45deg, transparent 43%, #696969 43.5%, #696969 57%, transparent 57%),
+    linear-gradient(90deg, transparent 40%, #696969 40%, #696969 60%, transparent 60%),
+    linear-gradient(135deg, transparent 43%, #696969 43.5%, #696969 57%, transparent 57%);
+    
+}
+.gear2:before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    top:143px;
+    left:182px;
+    border-radius:50%;
+    background-image:
+    radial-gradient(at center center, #fff 40%, #c4c4c4 42%, #c4c4c4 58%, transparent 59%),
+    linear-gradient(0deg, transparent 40%, #c4c4c4 40%, #c4c4c4 60%, transparent 60%),
+    linear-gradient(45deg, transparent 43%, #c4c4c4 43.5%, #c4c4c4 57%, transparent 57%),
+    linear-gradient(90deg, transparent 40%, #c4c4c4 40%, #c4c4c4 60%, transparent 60%),
+    linear-gradient(135deg, transparent 43%, #c4c4c4 43.5%, #c4c4c4 57%, transparent 57%);
+    
+}
+.gear2:after{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    top:100px;
+    left:310px;
+    border-radius:50%;
+    background-image:
+    radial-gradient(at center center,  #fff 30%, #494949 32%, #494949 58%, transparent 59%),
+    linear-gradient(0deg, transparent 40%, #494949 40%, #494949 60%, transparent 60%),
+    linear-gradient(45deg, transparent 43%, #494949 43.5%, #494949 57%, transparent 57%),
+    linear-gradient(90deg, transparent 40%, #494949 40%, #494949 60%, transparent 60%),
+    linear-gradient(135deg, transparent 43%, #494949 43.5%, #494949 57%, transparent 57%);
+    
+}
+
+@keyframes rotates{
+    form{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+@-moz-keyframes rotates{
+    form{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(360deg);}
+}
+@-webkit-keyframes rotates{
+    form{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+}
+@-o-keyframes rotates{
+    form{-o-transform:rotate(0deg);}
+    to{-o-transform:rotate(360deg);}
+}
+
+@keyframes rotateb{
+    form{transform:rotate(0deg);}
+    to{transform:rotate(-360deg);}
+}
+@-moz-keyframes rotateb{
+    form{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(-360deg);}
+}
+@-webkit-keyframes rotateb{
+    form{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(-360deg);}
+}
+@-o-keyframes rotateb{
+    form{-o-transform:rotate(0deg);}
+    to{-o-transform:rotate(-360deg);}
+}

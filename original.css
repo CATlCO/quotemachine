@@ -1,0 +1,86 @@
+.gear{
+    position:relative;
+    margin:100px auto;
+    width:200px;
+    height:200px;
+    background:#eee;
+    border-radius:50%;
+    box-shadow:inset 0 0 7px #aaa;
+    -moz-box-shadow:inset 0 0 7px #aaa;
+    -webkit-box-shadow:inset 0 0 7px #aaa;
+    -o-box-shadow:inset 0 0 7px #aaa;
+}
+.gear:before{
+    content:"";
+    position:absolute;
+    width:75px;
+    height:75px;
+    top:50px;left:40px;
+    border-radius:50%;
+    background-image:
+    radial-gradient(at center center, #eee 23%, #1ca 25%, #1ca 57%, transparent 59%),
+    linear-gradient(0deg, transparent 40%, #1ca 40%, #1ca 60%, transparent 60%),
+    linear-gradient(45deg, transparent 43%, #1ca 43%, #1ca 57%, transparent 57%),
+    linear-gradient(90deg, transparent 40%, #1ca 40%, #1ca 60%, transparent 60%),
+    linear-gradient(135deg, transparent 43%, #1ca 43%, #1ca 57%, transparent 57%);
+    
+    
+    animation:rotates 4s infinite linear;
+    -moz-animation:rotates 4s infinite linear;
+    -webkit-animation:rotates 4s infinite linear;
+    -o-animation:rotates 4s infinite linear;
+}
+.gear:after{
+    content:"";
+    position:absolute;
+    width:55px;
+    height:55px;
+    top:95px;left:103px;
+    border-radius:50%;
+    background-image:
+    radial-gradient(at center center, #eee 23%, #f35 25%, #f35 57%, transparent 59%),
+    linear-gradient(0deg, transparent 40%, #f35 40%, #f35 60%, transparent 60%),
+    linear-gradient(45deg, transparent 43%, #f35 43%, #f35 57%, transparent 57%),
+    linear-gradient(90deg, transparent 40%, #f35 40%, #f35 60%, transparent 60%),
+    linear-gradient(135deg, transparent 43%, #f35 43%, #f35 57%, transparent 57%);
+    
+    
+    animation:rotateb 4s infinite linear;
+    -moz-animation:rotateb 4s infinite linear;
+    -webkit-animation:rotateb 4s infinite linear;
+    -o-animation:rotateb 4s infinite linear;
+}
+
+@keyframes rotates{
+    form{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+@-moz-keyframes rotates{
+    form{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(360deg);}
+}
+@-webkit-keyframes rotates{
+    form{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+}
+@-o-keyframes rotates{
+    form{-o-transform:rotate(0deg);}
+    to{-o-transform:rotate(360deg);}
+}
+
+@keyframes rotateb{
+    form{transform:rotate(0deg);}
+    to{transform:rotate(-360deg);}
+}
+@-moz-keyframes rotateb{
+    form{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(-360deg);}
+}
+@-webkit-keyframes rotateb{
+    form{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(-360deg);}
+}
+@-o-keyframes rotateb{
+    form{-o-transform:rotate(0deg);}
+    to{-o-transform:rotate(-360deg);}
+}

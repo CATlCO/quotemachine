@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+body {
+  background-color: #1F1F1F;
+  font-family: "Indie Flower";
+  height: 100%;
+  overflow-y: hidden; }
+
+.container {
+  position: relative;
+  margin: 0px auto;
+  width: 700px;
+  height: 400px; }
+
+.machine {
+  position: relative;
+  margin-top: 100px;
+  height: 193px;
+  width: 370px; }
+
+.gear:before, .gear:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%; }
+
+.gear.rotate-right:before {
+  animation: right 4s ease;
+  -moz-animation: right 4s ease;
+  -webkit-animation: right 4s ease;
+  -o-animation: right 4s ease; }
+
+.gear.rotate-left:after {
+  animation: left 4s ease;
+  -moz-animation: left 4s ease;
+  -webkit-animation: left 4s ease;
+  -o-animation: left 4s ease; }
+
+.gear1:before {
+  width: 80px;
+  height: 80px;
+  top: 59px;
+  background-image: radial-gradient(at center center, #1F1F1F 23%, #000 25%, #000 58%, transparent 59%), linear-gradient(0deg, transparent 40%, #000 40%, #000 60%, transparent 60%), linear-gradient(45deg, transparent 43%, #000 43.5%, #000 57%, transparent 57%), linear-gradient(90deg, transparent 40%, #000 40%, #000 60%, transparent 60%), linear-gradient(135deg, transparent 43%, #000 43.5%, #000 57%, transparent 57%); }
+
+.gear1:after {
+  width: 100px;
+  height: 100px;
+  left: 64px;
+  background-image: radial-gradient(at center center, #1F1F1F 30%, #696969 32%, #696969 58%, transparent 59%), linear-gradient(0deg, transparent 40%, #696969 40%, #696969 60%, transparent 60%), linear-gradient(45deg, transparent 43%, #696969 43.5%, #696969 57%, transparent 57%), linear-gradient(90deg, transparent 40%, #696969 40%, #696969 60%, transparent 60%), linear-gradient(135deg, transparent 43%, #696969 43.5%, #696969 57%, transparent 57%); }
+
+.gear2:before {
+  width: 150px;
+  height: 150px;
+  top: 43px;
+  left: 143px;
+  background-image: radial-gradient(at center center, #1F1F1F 40%, #c4c4c4 42%, #c4c4c4 58%, transparent 59%), linear-gradient(0deg, transparent 40%, #c4c4c4 40%, #c4c4c4 60%, transparent 60%), linear-gradient(45deg, transparent 43%, #c4c4c4 43.5%, #c4c4c4 57%, transparent 57%), linear-gradient(90deg, transparent 40%, #c4c4c4 40%, #c4c4c4 60%, transparent 60%), linear-gradient(135deg, transparent 43%, #c4c4c4 43.5%, #c4c4c4 57%, transparent 57%); }
+
+.gear2:after {
+  width: 100px;
+  height: 100px;
+  left: 271px;
+  background-image: radial-gradient(at center center, #1F1F1F 30%, #494949 32%, #494949 58%, transparent 59%), linear-gradient(0deg, transparent 40%, #494949 40%, #494949 60%, transparent 60%), linear-gradient(45deg, transparent 43%, #494949 43.5%, #494949 57%, transparent 57%), linear-gradient(90deg, transparent 40%, #494949 40%, #494949 60%, transparent 60%), linear-gradient(135deg, transparent 43%, #494949 43.5%, #494949 57%, transparent 57%); }
+
+button {
+  font-family: "Indie Flower";
+  margin-top: 50px;
+  font-size: 20px;
+  height: 80px;
+  width: 80px;
+  border: none;
+  color: white;
+  background-color: #ba1a1a;
+  border-radius: 50%;
+  box-shadow: 1px 7px 0px rgba(186, 26, 26, 0.5), 0px 9px 25px rgba(0, 0, 0, 0.7);
+  transition: all .1s ease;
+  transition: filter .5s ease; }
+
+button:active {
+  box-shadow: 0px 3px 0px rgba(186, 26, 26, 0.5), 0px 3px 6px rgba(0, 0, 0, 0.9); }
+
+.disabled {
+  -webkit-filter: grayscale(0.5);
+  filter: grayscale(0.5); }
+
+.lightbulb {
+  position: absolute;
+  top: -50px;
+  right: 180px; }
+  .lightbulb svg {
+    height: 100px;
+    width: 100px; }
+
+.lb-head {
+  fill: #c4c4c4;
+  transition: all 0.3s ease; }
+
+.line {
+  display: inline;
+  position: absolute;
+  z-index: -2; }
+
+.l1 {
+  bottom: 150px;
+  left: 31px; }
+
+.l2 {
+  top: 40px;
+  left: 345px; }
+
+.card {
+  font-size: 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  height: 200px;
+  width: 300px;
+  background-color: tomato; }
+
+.qtext {
+  padding: 10px;
+  text-align: left; }
+
+.author {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right; }
+
+h1 {
+  font-size: 50px;
+  text-transform: uppercase; }
+
+.pin {
+  height: 10px;
+  width: 10px;
+  background-color: #1F1F1F;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 10px; }
+
+.stopper {
+  fill: #ba1a1a;
+  position: absolute;
+  top: 31px;
+  right: -19px;
+  height: 60px;
+  width: 60px;
+  z-index: 1; }
+
+@keyframes right {
+  form {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+@-moz-keyframes right {
+  form {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg); } }
+@-webkit-keyframes right {
+  form {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+@-o-keyframes right {
+  form {
+    -o-transform: rotate(0deg); }
+  to {
+    -o-transform: rotate(360deg); } }
+@keyframes left {
+  form {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(-360deg); } }
+@-moz-keyframes left {
+  form {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes left {
+  form {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-360deg); } }
+@-o-keyframes left {
+  form {
+    -o-transform: rotate(0deg); }
+  to {
+    -o-transform: rotate(-360deg); } }
+
+/*# sourceMappingURL=quotemach.css.map */
