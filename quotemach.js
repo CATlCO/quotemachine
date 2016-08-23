@@ -41,10 +41,10 @@ $(document).ready(function() {
         setTimeout(function() {
           $('.lb-head').css("fill", "yellow");
           setTimeout(function() {
-            $('.stopper').attr('transform', 'translate(8 44) rotate(-90)');
+            $('.stopper').addClass("rotate");
             $('.card1').addClass('animated hinge');
             setTimeout(function() {
-              $('.stopper').removeAttr('transform');
+              $('.stopper').removeClass('rotate');
             }, 250);
             $('.card1').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
               $('.lb-head').css("fill", "#c4c4c4");
